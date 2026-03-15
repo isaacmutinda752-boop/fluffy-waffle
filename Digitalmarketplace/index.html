@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webrayz | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1>SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links-container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="goal.html">Goal</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions" id="nav-actions-container">
+          <div class="login">
+            <button class="login-btn">
+              <a href="login.html" style="text-decoration: none; color: inherit"
+                >Login</a
+              >
+            </button>
+            <button class="signup-btn">
+              <a
+                href="signup.html"
+                style="text-decoration: none; color: inherit"
+                >Sign Up</a
+              >
+            </button>
+          </div>
+          <div class="start-selling">
+            <button class="start-selling-btn">
+              <a href="startselling.html" style="text-decoration: none"
+                >Start Selling</a
+              >
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--main-->
+    <main>
+      <section class="banner">
+        <div class="banner-content">
+          <h1>Sell & Buy Digital Products <span>Instantly</span></h1>
+          <div class="payment-options">
+            <span>M-pesa</span>
+            <span>Airtel Money</span>
+            <span>Bank Transfer</span>
+          </div>
+          <p>
+            Kenya's first digital products marketplace. Sell templates software,
+            courses, and more...
+          </p>
+          <div class="explore-products">
+            <button
+              class="products"
+              onclick="window.location.href = 'marketplace.html'"
+            >
+              Explore Products
+            </button>
+            <button
+              class="sell-products"
+              onclick="window.location.href = 'startselling.html'"
+            >
+              Sell Products
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <h3>8,400+</h3>
+          <p>Digital Products</p>
+        </div>
+        <div class="container">
+          <h3>1,400+</h3>
+          <p>Sellers</p>
+        </div>
+        <div class="container">
+          <h3>Ksh. 42M+</h3>
+          <p>Paid To sellers</p>
+        </div>
+        <div class="container">
+          <h3>50+</h3>
+          <p>Regions covered</p>
+        </div>
+      </section>
+      <section class="searchproducts">
+        <div class="products-search">
+          <p>Search 8,400+ products available</p>
+          <div class="search-wrapper">
+            <input
+              type="text"
+              placeholder="eg Business plan, courses, templates..."
+            />
+            <button>Search</button>
+          </div>
+          <div class="trending">
+            <h5>Trending</h5>
+            <p>Business plan</p>
+            <p>Ebooks</p>
+            <p>Canva Templates</p>
+            <p>M-pesa tools</p>
+          </div>
+        </div>
+      </section>
+      <section class="categories">
+        <div class="section-header">
+          <h2>Explore Top Categories</h2>
+          <p>
+            Find assets for any project, from web templates to video courses.
+          </p>
+        </div>
+        <div class="category-grid">
+          <a href="marketplace.html" class="category-card">
+            <i class="fas fa-file-code"></i>
+            <h3>Web Templates</h3>
+            <p>Modern landing pages & dashboards.</p>
+          </a>
+          <a href="marketplace.html" class="category-card">
+            <i class="fas fa-window-maximize"></i>
+            <h3>Software & Tools</h3>
+            <p>POS systems & productivity apps.</p>
+          </a>
+          <a href="marketplace.html" class="category-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Video Courses</h3>
+            <p>Master coding & digital marketing.</p>
+          </a>
+        </div>
+      </section>
+      <section class="featured-products">
+        <h2>Featured Digital Assets</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="badge">Template</div>
+            <img
+              src="../web.pictures/modern SaaS dashboard.jpeg"
+              alt="modern SaaS dashboard"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+            <div class="product-info">
+              <h3>Modern SaaS Dashboard</h3>
+              <p>React + Node.js Admin Template</p>
+              <div class="price-row">
+                <span class="price">Ksh. 3,500</span>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href = 'products.html?id=1'"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="badge">Course</div>
+            <img
+              src="../web.pictures/fullstackweb dev.jpeg"
+              alt="fullstack web dev"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+            <div class="product-info">
+              <h3>Fullstack Web Dev 2026</h3>
+              <p>Master MERN stack from scratch</p>
+              <div class="price-row">
+                <span class="price">Ksh. 5,000</span>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href = 'products.html?id=2'"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="badge">Software</div>
+            <img
+              src="../web.pictures/soko pos system.jpeg"
+              alt="pos system"
+              style="width: 100%; height: 200px; object-fit: cover"
+            />
+            <div class="product-info">
+              <h3>Soko POS System</h3>
+              <p>Desktop inventory management</p>
+              <div class="price-row">
+                <span class="price">Ksh. 12,000</span>
+                <button
+                  class="view-btn"
+                  onclick="window.location.href = 'products.html?id=3'"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="checkout">
+        <div class="powered">
+          <p>POWERED BY DARAJA MPESA API</p>
+        </div>
+        <div class="checkout-process">
+          <h2>Instant Payment With Mpesa</h2>
+          <p>
+            No credit. No Bank account. No waiting. Pay with M-pesa in seconds
+            and your Digital proucts arrives instantly- right on your phone
+          </p>
+          <button class="checkout-btn">Try M-pesa Checkout</button>
+          <button class="btn-learn-more">Learn More</button>
+          <div class="checkout-steps">
+            <ul>
+              <li>Choose your product</li>
+              <li>Click "Buy with Mpesa"</li>
+              <li>STK push arrives on your phone</li>
+              <li>Download Instantly</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="best-creators">
+        <div class="creators-header">
+          <h3>Top Sellers</h3>
+          <h1>Kenya's Best Creators</h1>
+        </div>
+        <div class="creator-grid">
+          <!-- Creator Card 1 -->
+          <div class="creator-card">
+            <div class="creator-avatar">J</div>
+            <h3>John Kamau</h3>
+            <p class="category">Business Templates & Plans</p>
+            <p class="area">
+              <i class="fas fa-map-marker-alt"></i> Nairobi, Kenya
+            </p>
+            <div class="creator-stats">
+              <div class="stat">
+                <h4>48</h4>
+                <p>Products</p>
+              </div>
+              <div class="stat">
+                <h4>4.9 <i class="fas fa-star" style="color: #fbbf24"></i></h4>
+                <p>Rating</p>
+              </div>
+              <div class="stat">
+                <h4>Ksh 200k</h4>
+                <p>Earned</p>
+              </div>
+            </div>
+          </div>
+          <!-- Creator Card 2 (Repeated for display) -->
+          <div class="creator-card">
+            <div class="creator-avatar" style="background: #ec4899">S</div>
+            <h3>Sarah Wanjiku</h3>
+            <p class="category">Digital Marketing Courses</p>
+            <p class="area">
+              <i class="fas fa-map-marker-alt"></i> Mombasa, Kenya
+            </p>
+            <div class="creator-stats">
+              <div class="stat">
+                <h4>32</h4>
+                <p>Products</p>
+              </div>
+              <div class="stat">
+                <h4>5.0 <i class="fas fa-star" style="color: #fbbf24"></i></h4>
+                <p>Rating</p>
+              </div>
+              <div class="stat">
+                <h4>Ksh 150k</h4>
+                <p>Earned</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>
+            Kenya's first digital products marketplace. Empowering creators to
+            sell and buyers to access quality assets instantly and securely.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="marketplace.html">Explore Products</a></li>
+            <li><a href="#">Become a Seller</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+            <li><a href="admin_login.html">Admin Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Subscribe to get updates on new products and special offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation (Visible only on mobile) -->
+    <div class="mobile-bottom-nav">
+      <a href="index.html" class="nav-item active">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="marketplace.html" class="nav-item">
+        <i class="fas fa-search"></i>
+        <span>Search</span>
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Cart</span>
+      </a>
+      <a href="login.html" class="nav-item">
+        <i class="fas fa-user"></i>
+        <span>Account</span>
+      </a>
+      <li><a href="adminportal.html">Admin</a></li>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

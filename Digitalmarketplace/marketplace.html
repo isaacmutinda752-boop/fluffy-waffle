@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketplace | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links-container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="marketplace.html" style="color: #2e8b57">Marketplace</a>
+            </li>
+            <li><a href="marketplace.html">Explore Products</a></li>
+            <li><a href="goal.html">Goal</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions" id="nav-actions-container">
+          <div class="login">
+            <button class="login-btn">
+              <a href="login.html" style="text-decoration: none; color: inherit"
+                >Login</a
+              >
+            </button>
+            <button class="signup-btn">
+              <a
+                href="signup.html"
+                style="text-decoration: none; color: inherit"
+                >Sign Up</a
+              >
+            </button>
+          </div>
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Reuse search style but with padding adjusted for this page -->
+      <section
+        class="searchproducts"
+        style="padding-top: 40px; padding-bottom: 20px"
+      >
+        <div class="products-search">
+          <p>Find digital assets for your next project</p>
+          <div class="search-wrapper">
+            <input
+              type="text"
+              placeholder="Search templates, software, courses..."
+            />
+            <button>Search</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="marketplace-container">
+        <!-- Sidebar Filters -->
+        <aside class="filters-sidebar">
+          <div class="filter-group">
+            <h3>Categories</h3>
+            <label><input type="checkbox" checked /> All Categories</label>
+            <label><input type="checkbox" /> Templates</label>
+            <label><input type="checkbox" /> Software</label>
+            <label><input type="checkbox" /> Courses</label>
+            <label><input type="checkbox" /> E-books</label>
+          </div>
+          <div class="filter-group">
+            <h3>Price Range</h3>
+            <label><input type="radio" name="price" /> Under Ksh 1,000</label>
+            <label><input type="radio" name="price" /> Ksh 1,000 - 5,000</label>
+            <label><input type="radio" name="price" /> Ksh 5,000+</label>
+          </div>
+          <div class="filter-group">
+            <h3>Rating</h3>
+            <label><input type="checkbox" /> 4 Stars & up</label>
+            <label><input type="checkbox" /> 3 Stars & up</label>
+          </div>
+        </aside>
+
+        <!-- Product Grid Area -->
+        <div class="products-area">
+          <div class="results-header">
+            <h2>All Products</h2>
+            <select class="sort-select">
+              <option>Sort by: Popularity</option>
+              <option>Newest Arrivals</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+              <div class="badge">Template</div>
+              <img
+                src="../web.pictures/modern saas dashboard.jpeg"
+                alt="saas dashboard"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
+              <div class="product-info">
+                <h3>Modern SaaS Dashboard</h3>
+                <p>React + Node.js Admin Template</p>
+                <div class="price-row">
+                  <span class="price">Ksh. 3,500</span>
+                  <button
+                    class="view-btn"
+                    onclick="window.location.href = 'products.html?id=1'"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+              <div class="badge">Course</div>
+              <img
+                src="../web.pictures/fullstackweb dev.jpeg"
+                alt="fullstack web dev"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
+              <div class="product-info">
+                <h3>Fullstack Web Dev 2026</h3>
+                <p>Master MERN stack from scratch</p>
+                <div class="price-row">
+                  <span class="price">Ksh. 5,000</span>
+                  <button
+                    class="view-btn"
+                    onclick="window.location.href = 'products.html?id=2'"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+              <div class="badge">Software</div>
+              <img
+                src="../web.pictures/soko pos system.jpeg"
+                alt="pos system"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
+              <div class="product-info">
+                <h3>Soko POS System</h3>
+                <p>Desktop inventory management</p>
+                <div class="price-row">
+                  <span class="price">Ksh. 12,000</span>
+                  <button
+                    class="view-btn"
+                    onclick="window.location.href = 'products.html?id=3'"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+              <div class="badge">E-book</div>
+              <div class="product-img-placeholder"></div>
+              <div class="product-info">
+                <h3>Digital Marketing Guide</h3>
+                <p>Comprehensive guide for 2026</p>
+                <div class="price-row">
+                  <span class="price">Ksh. 1,500</span>
+                  <button
+                    class="view-btn"
+                    onclick="window.location.href = 'checkout.html'"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+              <div class="badge">Template</div>
+              <div class="product-img-placeholder"></div>
+              <div class="product-info">
+                <h3>Portfolio Website Kit</h3>
+                <p>HTML/CSS/JS Personal Site</p>
+                <div class="price-row">
+                  <span class="price">Ksh. 2,000</span>
+                  <button
+                    class="view-btn"
+                    onclick="window.location.href = 'checkout.html'"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card">
+              <div class="badge">Course</div>
+              <div class="product-img-placeholder"></div>
+              <div class="product-info">
+                <h3>Python for Data Science</h3>
+                <p>Beginner to Advanced Course</p>
+                <div class="price-row">
+                  <span class="price">Ksh. 4,500</span>
+                  <button
+                    class="view-btn"
+                    onclick="window.location.href = 'checkout.html'"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>
+            Kenya's first digital products marketplace. Empowering creators to
+            sell and buyers to access quality assets instantly and securely.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="marketplace.html">Explore Products</a></li>
+            <li><a href="#">Become a Seller</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+            <li><a href="admin_login.html">Admin Login</a></li>
+          </ul>
+        </div>
+        <div
+          class="footer-bottom"
+          style="
+            width: 100%;
+            border-top: 1px solid #445;
+            padding-top: 20px;
+            margin-top: 0;
+          "
+        >
+          <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

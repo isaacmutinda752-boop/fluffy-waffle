@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmed | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Marketplace</a></li>
+            <li><a href="search.html">Explore Products</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions">
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="success-page">
+      <div class="success-card">
+        <i class="fas fa-check-circle success-icon"></i>
+        <h1 style="color: #333; margin-bottom: 10px">Payment Successful!</h1>
+        <p style="color: #666; margin-bottom: 20px">
+          Thank you for your purchase. A confirmation email has been sent.
+        </p>
+
+        <div class="order-details">
+          <div class="detail-row">
+            <span>Transaction ID:</span>
+            <strong id="order-id">Loading...</strong>
+          </div>
+          <div class="detail-row">
+            <span>Date:</span>
+            <strong id="order-date">Loading...</strong>
+          </div>
+          <div class="detail-row">
+            <span>Item:</span>
+            <strong id="order-item">Loading...</strong>
+          </div>
+          <div class="detail-row">
+            <span>Payment Method:</span>
+            <strong>M-Pesa</strong>
+          </div>
+          <div
+            class="detail-row"
+            style="
+              margin-top: 15px;
+              padding-top: 15px;
+              border-top: 1px solid #ddd;
+            "
+          >
+            <span>Amount Paid:</span>
+            <strong style="color: #2e8b57; font-size: 1.1rem" id="order-amount"
+              >Loading...</strong
+            >
+          </div>
+        </div>
+
+        <button class="pay-btn-large" onclick="alert('Download started!')">
+          <i class="fas fa-download" style="margin-right: 8px"></i> Download
+          Assets
+        </button>
+
+        <div style="margin-top: 20px">
+          <a
+            href="index.html"
+            style="color: #666; text-decoration: none; font-size: 0.9rem"
+          >
+            <i class="fas fa-arrow-left"></i> Return to Home
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>
+            Kenya's first digital products marketplace. Empowering creators to
+            sell and buyers to access quality assets instantly and securely.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Marketplace</a></li>
+            <li><a href="#">Become a Seller</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="admin_login.html">Admin Login</a></li>
+          </ul>
+        </div>
+        <div
+          class="footer-bottom"
+          style="
+            width: 100%;
+            border-top: 1px solid #445;
+            padding-top: 20px;
+            margin-top: 0;
+          "
+        >
+          <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="success.js"></script>
+  </body>
+</html>

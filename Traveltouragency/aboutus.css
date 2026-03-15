@@ -1,0 +1,180 @@
+
+       *{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+       }
+       html {
+           scroll-behavior: smooth;
+           scroll-padding-top: 75px; /* Offsets scroll position for the fixed header */
+       }
+       body{
+           background-color: #f4ebd0; /* Safari Beige matching the About section */
+       }
+       /* Specific styles for About Us page sections */
+        
+        .about-hero {
+            height: 60vh;
+            /* Reuse image from style.css animation */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../web.pictures/companiesoffice.jpeg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            height: 100vh;
+        }
+        .about .about-container .about-image img{
+            height: 13cm;
+            width: 11.5cm;
+            border-radius: 7px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        
+        }
+        
+        .mission-vision {
+            padding: 30px 10%;
+            background-color: #fff;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        .mv-box {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            padding: 40px 30px;
+            background: #f8fcf8;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            animation: appear linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 40%;
+        }
+        
+        .mv-box:hover {
+            transform: translateY(-10px);
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                translate: 0 50px;
+            }
+            to {
+                opacity: 1;
+                translate: 0 0;
+            }
+        }
+
+        .mv-box i {
+            font-size: 2.5rem;
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+        
+        .mv-box h3 {
+            color: #1b4d3e;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .mv-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .team-section {
+            padding: 80px 5%;
+            background-color: #f4ebd0; /* Safari Beige */
+            text-align: center;
+        }
+        
+        .team-section h2 {
+            font-size: 2.5rem;
+            color: #1b4d3e;
+            margin-bottom: 50px;
+        }
+        
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .team-member {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 280px;
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        
+        .team-info {
+            padding: 20px;
+        }
+        
+        .team-info h4 {
+            color: #2E8B57;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .team-info p {
+            color: #777;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+/* --- Media Queries for Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .about-hero{
+        height: 50vh; /* Reduce hero height on mobile */
+    }
+    
+    .about-hero .banner-content h1 {
+        font-size: 2.5rem; /* Adjust font size */
+    }
+
+    .mission-vision {
+        padding: 60px 5%;
+        gap: 20px;
+    }
+    
+    .mv-box {
+        min-width: 100%; /* Cards take full width on mobile */
+        margin-bottom: 10px;
+    }
+    
+    .team-section {
+        padding: 60px 5%;
+    }
+    
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .team-member {
+        width: 100%;
+        max-width: 100%;
+    }
+}

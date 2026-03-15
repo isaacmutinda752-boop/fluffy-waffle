@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Selling | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+      /* Page Specific Styles */
+      .seller-hero {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 0 5%;
+      }
+
+      .seller-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .seller-hero span {
+        color: #2e8b57;
+      }
+
+      .seller-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+      }
+
+      .seller-steps {
+        padding: 80px 5%;
+        background: #fff;
+        text-align: center;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-top: 50px;
+      }
+
+      .step-card {
+        padding: 30px;
+        border-radius: 10px;
+        background: #f8f9fa;
+        transition: transform 0.3s ease;
+      }
+
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .step-icon {
+        width: 70px;
+        height: 70px;
+        background: #eafaf1;
+        color: #2e8b57;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 0 auto 20px;
+      }
+
+      .why-join {
+        padding: 80px 5%;
+        background-color: #f0fdf4;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 40px auto 0;
+      }
+
+      .benefit-item {
+        display: flex;
+        gap: 20px;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      }
+
+      .benefit-item i {
+        font-size: 2rem;
+        color: #2e8b57;
+      }
+
+      .cta-section {
+        padding: 80px 5%;
+        text-align: center;
+        background: #1c2b22;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="goal.html">Goal</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions">
+          <div class="login">
+            <button class="login-btn">
+              <a href="login.html" style="text-decoration: none; color: inherit"
+                >Login</a
+              >
+            </button>
+          </div>
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="seller-hero">
+        <div>
+          <h1>Turn Your Knowledge into <span>Income</span></h1>
+          <p>
+            Join thousands of Kenyan creators selling software, templates,
+            courses, and e-books. Set your price, get paid instantly via M-Pesa.
+          </p>
+          <button
+            class="start-selling-btn"
+            style="font-size: 1.2rem; padding: 15px 40px"
+            onclick="window.location.href = 'signup.html?role=seller'"
+          >
+            Join as a Seller
+          </button>
+        </div>
+      </section>
+
+      <section class="seller-steps">
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p>Start your digital business in 3 simple steps</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+            <h3>1. Create Account</h3>
+            <p>
+              Sign up for free and set up your seller profile. It takes less
+              than 2 minutes.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <h3>2. Upload Product</h3>
+            <p>
+              Upload your files, add a description, set a price, and publish to
+              our marketplace.
+            </p>
+          </div>
+          <div class="step-card">
+            <div class="step-icon"><i class="fas fa-wallet"></i></div>
+            <h3>3. Get Paid</h3>
+            <p>
+              Receive instant payments to your M-Pesa or bank account whenever a
+              sale is made.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-join">
+        <div class="section-header">
+          <h2>Why Sell on SokoDigital?</h2>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <i class="fas fa-bolt"></i>
+            <div>
+              <h3>Instant Payouts</h3>
+              <p>
+                No waiting periods. Get your money immediately via M-Pesa
+                integration.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <h3>Reach More Buyers</h3>
+              <p>
+                Tap into our growing network of businesses and individuals
+                looking for digital assets.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <h3>Secure Platform</h3>
+              <p>
+                Your intellectual property is safe, and transactions are
+                encrypted and secure.
+              </p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <i class="fas fa-chart-line"></i>
+            <div>
+              <h3>Powerful Analytics</h3>
+              <p>
+                Track your sales, views, and revenue with our comprehensive
+                seller dashboard.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <h2>Ready to start your journey?</h2>
+        <p style="margin: 20px 0 30px; opacity: 0.9">
+          Join the community of creators earning passive income today.
+        </p>
+        <button
+          class="start-selling-btn"
+          style="background: white; color: #1c2b22; font-size: 1.1rem"
+          onclick="window.location.href = 'signup.html?role=seller'"
+        >
+          Create Seller Account
+        </button>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>Kenya's first digital products marketplace.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="admin_login.html">Admin Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="footer-bottom"
+        style="
+          width: 100%;
+          border-top: 1px solid #445;
+          padding-top: 20px;
+          margin-top: 0;
+        "
+      >
+        <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

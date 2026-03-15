@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Marketplace</a></li>
+            <li><a href="search.html">Explore Products</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions">
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="login-page">
+      <div class="login-card">
+        <div class="login-header">
+          <h2>Create Account</h2>
+          <p style="color: #666">Join SokoDigital today</p>
+        </div>
+
+        <!-- Buyer/Seller Toggle -->
+        <div class="role-switch">
+          <div class="role-option active" data-role="buyer">I want to Buy</div>
+          <div class="role-option" data-role="seller">I want to Sell</div>
+        </div>
+
+        <form id="signup-form">
+          <!-- Hidden input to track role -->
+          <input type="hidden" id="user-role" name="role" value="buyer" />
+
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="0712345678" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Confirm password"
+              required
+            />
+          </div>
+
+          <div style="margin-bottom: 20px; font-size: 0.85rem; color: #666">
+            <input
+              type="checkbox"
+              id="terms"
+              required
+              style="width: auto; margin-right: 5px"
+            />
+            <label for="terms" style="display: inline; font-weight: normal"
+              >I agree to the
+              <a href="#" style="color: #2e8b57">Terms & Conditions</a></label
+            >
+          </div>
+
+          <button type="submit" class="login-btn-submit">Sign Up</button>
+        </form>
+
+        <div class="form-footer">
+          <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>Kenya's first digital products marketplace.</p>
+        </div>
+        <div
+          class="footer-bottom"
+          style="
+            width: 100%;
+            padding-top: 20px;
+            border-top: 1px solid #445;
+            margin-top: 0;
+          "
+        >
+          <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const roleOptions = document.querySelectorAll(".role-option");
+        const roleInput = document.getElementById("user-role");
+        const buyerOption = document.querySelector('[data-role="buyer"]');
+        const sellerOption = document.querySelector('[data-role="seller"]');
+
+        // Function to switch roles
+        function switchRole(role) {
+          if (role === "seller") {
+            buyerOption.classList.remove("active");
+            sellerOption.classList.add("active");
+            roleInput.value = "seller";
+          } else {
+            sellerOption.classList.remove("active");
+            buyerOption.classList.add("active");
+            roleInput.value = "buyer";
+          }
+        }
+
+        // Check for URL parameter to pre-select role
+        const urlParams = new URLSearchParams(window.location.search);
+        const roleFromUrl = urlParams.get("role");
+        if (roleFromUrl === "seller") {
+          switchRole("seller");
+        }
+
+        // Add click listeners to toggle
+        roleOptions.forEach((option) => {
+          option.addEventListener("click", () => {
+            switchRole(option.dataset.role);
+          });
+        });
+
+        const signupForm = document.getElementById("signup-form");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirm-password");
+
+        signupForm.addEventListener("submit", (e) => {
+          e.preventDefault(); // Always prevent default to handle with JS
+          if (password.value !== confirmPassword.value) {
+            alert("Passwords do not match!");
+            confirmPassword.style.border = "1px solid red";
+            return;
+          }
+
+          // Mock signup and redirect
+          if (roleInput.value === "seller") {
+            localStorage.setItem("sellerSession", "true");
+            window.location.href = "seller_dashboard.html";
+          } else {
+            // For buyers, just redirect to home page after "signup"
+            window.location.href = "index.html";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

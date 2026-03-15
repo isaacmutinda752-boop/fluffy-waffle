@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Orders | Seller Dashboard</title>
+    <link rel="stylesheet" href="adminportal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Seller Dashboard</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="seller_dashboard.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="seller_products.html"
+              ><i class="fas fa-box-open"></i> My Products</a
+            >
+          </li>
+          <li>
+            <a href="seller_orders.html" class="active"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-wallet"></i> Payouts</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-store"></i> View Storefront</a
+            >
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>My Orders</h1>
+          </div>
+        </header>
+
+        <div class="content-table-container">
+          <p>Order management interface will be here.</p>
+        </div>
+      </main>
+    </div>
+    <script src="seller.js"></script>
+  </body>
+</html>

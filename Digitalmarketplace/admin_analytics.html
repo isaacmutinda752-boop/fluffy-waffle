@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics | Admin Portal</title>
+    <link rel="stylesheet" href="adminportal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .charts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+      }
+      .chart-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+      .chart-card h3 {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 1.2rem;
+      }
+      .full-width {
+        grid-column: 1 / -1;
+      }
+      @media (max-width: 768px) {
+        .charts-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>SokoDigital Admin</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="adminportal.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-box-open"></i> Products</a
+            >
+          </li>
+          <li>
+            <a href="admin_sellers.html"
+              ><i class="fas fa-users"></i> Sellers</a
+            >
+          </li>
+          <li>
+            <a href="admin_orders.html"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="admin_analytics.html" class="active"
+              ><i class="fas fa-chart-line"></i> Analytics</a
+            >
+          </li>
+          <li>
+            <a href="admin_settings.html"
+              ><i class="fas fa-cog"></i> Settings</a
+            >
+          </li>
+          <li>
+            <a href="checkout.html"
+              ><i class="fas fa-credit-card"></i> Checkout</a
+            >
+          </li>
+          <li>
+            <a href="index.html"><i class="fas fa-globe"></i> View Website</a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Analytics Overview</h1>
+          </div>
+          <button class="btn btn-primary">
+            <i class="fas fa-download"></i> Export Report
+          </button>
+        </header>
+
+        <div class="charts-grid">
+          <!-- Revenue Chart -->
+          <div class="chart-card full-width">
+            <h3>Monthly Revenue (2026)</h3>
+            <canvas id="revenueChart" style="max-height: 400px"></canvas>
+          </div>
+
+          <!-- Categories Distribution -->
+          <div class="chart-card">
+            <h3>Sales by Category</h3>
+            <canvas id="categoryChart"></canvas>
+          </div>
+
+          <!-- User Growth -->
+          <div class="chart-card">
+            <h3>New Sellers vs Buyers</h3>
+            <canvas id="userGrowthChart"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="admin.js"></script>
+    <script>
+      // --- Revenue Chart ---
+      new Chart(document.getElementById("revenueChart"), {
+        type: "line",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          datasets: [
+            {
+              label: "Revenue (Ksh)",
+              data: [1200000, 1900000, 3000000, 5000000, 4500000, 6000000],
+              borderColor: "#2e8b57",
+              tension: 0.4,
+              fill: true,
+              backgroundColor: "rgba(46, 139, 87, 0.1)",
+            },
+          ],
+        },
+      });
+
+      // --- Category Chart ---
+      new Chart(document.getElementById("categoryChart"), {
+        type: "doughnut",
+        data: {
+          labels: ["Templates", "Software", "Courses", "E-books"],
+          datasets: [
+            {
+              data: [45, 25, 20, 10],
+              backgroundColor: ["#2e8b57", "#007bff", "#ffc107", "#dc3545"],
+            },
+          ],
+        },
+      });
+
+      // --- User Growth Chart ---
+      new Chart(document.getElementById("userGrowthChart"), {
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          datasets: [
+            {
+              label: "Buyers",
+              data: [120, 190, 300, 500, 200, 300],
+              backgroundColor: "#007bff",
+            },
+            {
+              label: "Sellers",
+              data: [20, 30, 50, 80, 40, 60],
+              backgroundColor: "#2e8b57",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

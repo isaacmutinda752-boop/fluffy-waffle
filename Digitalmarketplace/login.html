@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Marketplace</a></li>
+            <li><a href="search.html">Explore Products</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions">
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="login-page">
+      <div class="login-card">
+        <div class="login-header">
+          <h2>Welcome Back</h2>
+          <p style="color: #666">Login to access your account</p>
+        </div>
+
+        <!-- Buyer/Seller Toggle -->
+        <div class="role-switch">
+          <div class="role-option active" data-role="buyer">Buyer Login</div>
+          <div class="role-option" data-role="seller">Seller Login</div>
+        </div>
+
+        <form id="login-form">
+          <!-- Hidden input to track role -->
+          <input type="hidden" id="user-role" name="role" value="buyer" />
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div style="text-align: right; margin-bottom: 20px">
+            <a
+              href="#"
+              style="color: #666; font-size: 0.85rem; text-decoration: none"
+              >Forgot Password?</a
+            >
+          </div>
+
+          <button type="submit" class="login-btn-submit">Login</button>
+        </form>
+
+        <div class="form-footer">
+          <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>Kenya's first digital products marketplace.</p>
+        </div>
+        <div
+          class="footer-bottom"
+          style="
+            width: 100%;
+            padding-top: 20px;
+            border-top: 1px solid #445;
+            margin-top: 0;
+          "
+        >
+          <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const roleOptions = document.querySelectorAll(".role-option");
+        const roleInput = document.getElementById("user-role");
+        const buyerOption = document.querySelector('[data-role="buyer"]');
+        const sellerOption = document.querySelector('[data-role="seller"]');
+
+        // Function to switch roles
+        function switchRole(role) {
+          if (role === "seller") {
+            buyerOption.classList.remove("active");
+            sellerOption.classList.add("active");
+            roleInput.value = "seller";
+          } else {
+            sellerOption.classList.remove("active");
+            buyerOption.classList.add("active");
+            roleInput.value = "buyer";
+          }
+        }
+
+        // Check for URL parameter to pre-select role
+        const urlParams = new URLSearchParams(window.location.search);
+        const roleFromUrl = urlParams.get("role");
+        if (roleFromUrl === "seller") {
+          switchRole("seller");
+        }
+
+        // Add click listeners to toggle
+        roleOptions.forEach((option) => {
+          option.addEventListener("click", () => {
+            switchRole(option.dataset.role);
+          });
+        });
+
+        // Handle login form submission
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (roleInput.value === "seller") {
+            localStorage.setItem("sellerSession", "true");
+            window.location.href = "seller_dashboard.html";
+          } else {
+            // For buyers, just redirect to home page after "login"
+            window.location.href = "index.html";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

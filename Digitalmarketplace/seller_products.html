@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Products | Seller Dashboard</title>
+    <link rel="stylesheet" href="adminportal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Seller Dashboard</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="seller_dashboard.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="seller_products.html" class="active"
+              ><i class="fas fa-box-open"></i> My Products</a
+            >
+          </li>
+          <li>
+            <a href="seller_orders.html"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-wallet"></i> Payouts</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-store"></i> View Storefront</a
+            >
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>My Products</h1>
+          </div>
+          <button class="btn btn-primary">
+            <i class="fas fa-plus"></i> Add New Product
+          </button>
+        </header>
+
+        <!-- Filters and Search -->
+        <div class="filters-bar">
+          <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search your products..." />
+          </div>
+          <div class="filter-wrapper">
+            <select>
+              <option value="all">All Categories</option>
+              <option value="templates">Templates</option>
+              <option value="software">Software</option>
+              <option value="courses">Courses</option>
+              <option value="ebooks">E-books</option>
+            </select>
+            <select>
+              <option value="all">All Status</option>
+              <option value="active">Active</option>
+              <option value="draft">Draft</option>
+              <option value="archived">Archived</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="content-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Sales</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: #eee;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #999;
+                      "
+                    >
+                      <i class="fas fa-image"></i>
+                    </div>
+                    <div>
+                      <div style="font-weight: 600">Modern SaaS Dashboard</div>
+                      <div style="font-size: 0.85rem; color: #666">
+                        #SKD1024
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>Template</td>
+                <td>Ksh. 3,500</td>
+                <td>124</td>
+                <td><span class="status active">Active</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-action btn-delete" title="Delete">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: #eee;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #999;
+                      "
+                    >
+                      <i class="fas fa-image"></i>
+                    </div>
+                    <div>
+                      <div style="font-weight: 600">Fullstack Web Dev 2026</div>
+                      <div style="font-size: 0.85rem; color: #666">
+                        #SKD1025
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>Course</td>
+                <td>Ksh. 5,000</td>
+                <td>85</td>
+                <td><span class="status active">Active</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-action btn-delete" title="Delete">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 40px;
+                        height: 40px;
+                        background: #eee;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #999;
+                      "
+                    >
+                      <i class="fas fa-image"></i>
+                    </div>
+                    <div>
+                      <div style="font-weight: 600">Ultimate Python Guide</div>
+                      <div style="font-size: 0.85rem; color: #666">
+                        #SKD1026
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>E-book</td>
+                <td>Ksh. 1,000</td>
+                <td>0</td>
+                <td><span class="status pending">Draft</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit" title="Edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-action btn-delete" title="Delete">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="seller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+/* Specific styles for the Goal page */
+.goal-hero {
+  background-color: #376341;
+  text-align: center;
+  padding: 60px 5%;
+  height: 75vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.goal-hero h1 {
+  font-size: 2.8rem;
+  color: #1a1919;
+  margin-bottom: 15px;
+}
+.goal-hero h1 span {
+  color: #56d68d;
+}
+.goal-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #bebebe;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.mission-section {
+  padding: 80px 5%;
+  width: 100%;
+  margin: 0 auto;
+  background: #bebebe;
+}
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.value-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top: 4px solid #2e8b57;
+}
+.value-card:hover {
+  transform: translateY(-10px);
+}
+.value-card i {
+  font-size: 2.5rem;
+  color: #2e8b57;
+  margin-bottom: 20px;
+  background: #eafaf1;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+}
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 5%;
+  background-color: #c4d8d0;
+  text-align: center;
+}
+.team-section h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 50px;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.team-member {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-8px);
+}
+.member-img {
+  width: 100px;
+  height: 100px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  /* Placeholder pattern */
+  background-image: linear-gradient(
+    45deg,
+    #e9ecef 25%,
+    #f1f3f5 25%,
+    #f1f3f5 50%,
+    #e9ecef 50%,
+    #e9ecef 75%,
+    #f1f3f5 75%,
+    #f1f3f5 100%
+  );
+  background-size: 20px 20px;
+  border: 2px solid #2e8b57;
+}
+.team-member h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+.team-member p {
+  color: #666;
+  font-size: 0.9rem;
+}

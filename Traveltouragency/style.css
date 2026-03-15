@@ -1,0 +1,689 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px; /* Offsets scroll position for the fixed header */
+}
+body {
+  /* Add padding to offset the fixed header */
+  /* padding-top: 75px; Removed so the banner sits behind the transparent nav */
+  background-color: #fcfcfc;
+  animation: pageLoad 1.2s ease-out;
+}
+header {
+  width: 100%;
+  height: fit-content;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition:
+    background-color 0.3s ease,
+    padding 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 5%;
+  gap: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header nav .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+header nav .logo h1 {
+  color: #2e8b57; /* SeaGreen */
+  font-weight: bold;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+}
+header nav ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5cm;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  padding: 10px 12px;
+  border-radius: 1px transparent;
+  opacity: 1;
+  animation: mylinksnav 1s ease-out;
+}
+@keyframes mylinksnav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+header nav ul li a:hover {
+  color: #2e8b57;
+  border-radius: 5px;
+  background-color: #f0fdf4;
+}
+header nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header nav .login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+header nav .login button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+header nav .login button a {
+  text-decoration: none;
+  color: white;
+}
+header nav .login button:hover {
+  background-color: #1e5e3a;
+}
+main .banner {
+  width: 100%;
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../web.pictures/gameparkhomepage1.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: myhomeanimation 10s infinite ease;
+  transition: all 0.5s ease;
+}
+@keyframes myhomeanimation {
+  0%,
+  100% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../web.pictures/gameparkhomepage1.jpeg);
+  }
+  50% {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../web.pictures/gameparkhomepage2.jpeg);
+  }
+}
+
+/* Page Load Animation Keyframes */
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: brightness(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+}
+
+/* Keyframes for the scroll-driven nav background */
+@keyframes nav-bg-scroll {
+  to {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+.banner-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 3cm 20px;
+}
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  margin-top: 2cm;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+.banner-content button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.banner-content button a {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+}
+.banner-content button:hover {
+  background-color: #1e5e3a;
+}
+
+/* Hamburger Menu Icon (hidden on desktop) */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #2e8b57;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* About Us Section */
+.about {
+  padding: 80px 5%;
+  background-color: #f4ebd0; /* Safari Beige */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  color: #1b4d3e;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-content button {
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.about-content button:hover {
+  background-color: #1e5e3a;
+}
+/* Services Section */
+.services {
+  padding: 80px 5%;
+  background-color: #ffffff;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  color: #1b4d3e;
+  margin-bottom: 15px;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f8fcf8;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  flex: 1 1 320px;
+  max-width: 400px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #2e8b57;
+  margin: 20px 20px 10px 20px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  padding: 0 20px 20px 20px;
+}
+
+/* Destinations Gallery Section */
+.destinations {
+  padding: 80px 5%;
+  background-color: #f0f4f1; /* Soft Mint/Grey */
+}
+
+.destinations-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.destinations-header h2 {
+  font-size: 2.5rem;
+  color: #1b4d3e;
+  margin-bottom: 15px;
+}
+
+.destinations-header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: 350px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.destination-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+/* Blog Section */
+.blog {
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-header h2 {
+  font-size: 2.5rem;
+  color: #1b4d3e;
+  margin-bottom: 15px;
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.blog-post {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  flex: 1 1 320px;
+  max-width: 350px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-content h3 {
+  font-size: 1.4rem;
+  color: #1b4d3e;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #2e8b57;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #1e5e3a;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #1b3322; /* Dark Jungle Green */
+  color: #bbb;
+  padding: 80px 0 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  width: 22%;
+  padding: 0 15px;
+}
+
+.footer-col:first-child {
+  width: 30%; /* Give more space to the about text */
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #2e8b57;
+  height: 2px;
+  width: 50px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li,
+.footer-col > p {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li p {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-col ul li a,
+.footer-col > p {
+  font-size: 16px;
+  text-decoration: none;
+  color: #bbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #2e8b57;
+  background-color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: #bbb;
+  margin: 0;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  header nav {
+    padding: 1rem 5%;
+  }
+
+  .menu-icon {
+    display: block; /* Show hamburger icon on mobile */
+  }
+
+  header nav .nav-links {
+    display: none; /* Hide nav links by default on mobile */
+    position: absolute;
+    top: 100%; /* Position below the header */
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  #menu-toggle:checked ~ .nav-links {
+    display: block;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav .login {
+    margin-top: 15px;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  .banner-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services-header p {
+    max-width: 100%;
+  }
+
+  .destinations-header p {
+    max-width: 100%;
+  }
+
+  .blog-header p {
+    max-width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0;
+  }
+  .footer-col:first-child {
+    width: 100%;
+  }
+  .footer-col h4::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-col ul li p {
+    justify-content: center;
+  }
+
+  /* Grid refinements for mobile */
+  .services-container,
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card,
+  .gallery-item {
+    max-width: 100%;
+  }
+
+  .gallery-item {
+    height: 250px; /* Shorter items on mobile for easier scrolling */
+  }
+}

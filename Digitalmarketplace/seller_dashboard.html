@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller Dashboard | SokoDigital</title>
+    <link rel="stylesheet" href="admin.css" />
+    <!-- Reusing admin styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>Seller Dashboard</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="seller_dashboard.html" class="active"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="seller_products.html"
+              ><i class="fas fa-box-open"></i> My Products</a
+            >
+          </li>
+          <li>
+            <a href="seller_orders.html"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-wallet"></i> Payouts</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+          <li>
+            <a href="index.html"
+              ><i class="fas fa-store"></i> View Storefront</a
+            >
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Welcome, Seller!</h1>
+          </div>
+          <button
+            class="btn btn-primary"
+            onclick="window.location.href = 'seller_products.html'"
+          >
+            <i class="fas fa-plus"></i> Add New Product
+          </button>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card revenue">
+            <i class="fas fa-dollar-sign"></i>
+            <div class="stat-info">
+              <h3>Ksh. 212,500</h3>
+              <p>Total Earnings</p>
+            </div>
+          </div>
+          <div class="stat-card orders">
+            <i class="fas fa-receipt"></i>
+            <div class="stat-info">
+              <h3>1,205</h3>
+              <p>Total Sales</p>
+            </div>
+          </div>
+          <div class="stat-card products">
+            <i class="fas fa-box-open"></i>
+            <div class="stat-info">
+              <h3>48</h3>
+              <p>Active Products</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Sales Table -->
+        <div class="recent-orders">
+          <h2>Recent Sales</h2>
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SKD1024</td>
+                <td>Modern SaaS Dashboard</td>
+                <td>2026-03-14</td>
+                <td>Ksh. 3,500</td>
+                <td><span class="status completed">Paid</span></td>
+              </tr>
+              <tr>
+                <td>#SKD1023</td>
+                <td>Fullstack Web Dev 2026</td>
+                <td>2026-03-14</td>
+                <td>Ksh. 5,000</td>
+                <td><span class="status completed">Paid</span></td>
+              </tr>
+              <tr>
+                <td>#SKD1020</td>
+                <td>Business Plan Ebook</td>
+                <td>2026-03-11</td>
+                <td>Ksh. 800</td>
+                <td><span class="status completed">Paid</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="seller.js"></script>
+  </body>
+</html>

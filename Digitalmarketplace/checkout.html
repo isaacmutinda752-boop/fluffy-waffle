@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links-container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Marketplace</a></li>
+            <li><a href="m.html">Explore Products</a></li>
+            <li><a href="#">Goal</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions" id="nav-actions-container">
+          <div class="login">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+          </div>
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="checkout-page">
+      <div class="checkout-container">
+        <!-- Left Column: Billing Form -->
+        <div class="billing-form">
+          <h2>Billing Details</h2>
+          <form id="checkout-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">M-Pesa Phone Number</label>
+              <input type="tel" id="phone" placeholder="0712345678" required />
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Column: Order Summary -->
+        <div class="order-summary-card">
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Product</span>
+            <span id="summary-product">Modern SaaS Dashboard</span>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">Ksh. 3,500</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span id="summary-total">Ksh. 3,500</span>
+          </div>
+          <button type="submit" form="checkout-form" class="pay-btn-large">
+            Pay with M-Pesa
+          </button>
+          <div
+            style="
+              text-align: center;
+              margin-top: 15px;
+              color: #666;
+              font-size: 0.9rem;
+            "
+          >
+            <i class="fas fa-lock"></i> Secured by Safaricom
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4 class="footer-logo">SokoDigital</h4>
+          <p>
+            Kenya's first digital products marketplace. Empowering creators to
+            sell and buyers to access quality assets instantly and securely.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Marketplace</a></li>
+            <li><a href="search.html">Explore Products</a></li>
+            <li><a href="#">Become a Seller</a></li>
+            <li><a href="#">Affiliate Program</a></li>
+            <li><a href="admin_login.html">Admin Login</a></li>
+          </ul>
+        </div>
+        <div
+          class="footer-bottom"
+          style="
+            width: 100%;
+            border-top: 1px solid #445;
+            padding-top: 20px;
+            margin-top: 0;
+          "
+        >
+          <!-- Shortened footer for checkout page cleanliness -->
+          <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productData = localStorage.getItem("checkoutProduct");
+        if (productData) {
+          const product = JSON.parse(productData);
+
+          document.getElementById("summary-product").textContent =
+            product.title;
+          const priceStr = "Ksh. " + product.price;
+          document.getElementById("summary-subtotal").textContent = priceStr;
+          document.getElementById("summary-total").textContent = priceStr;
+        }
+      });
+    </script>
+  </body>
+</html>

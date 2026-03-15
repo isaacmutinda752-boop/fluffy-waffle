@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px; /* Offsets scroll position for the fixed header */
+}
+body{
+    background-color: #f4ebd0; /* Safari Beige matching the About section */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* --- Booking Page --- */
+.booking-section {
+    padding: 120px 5% 80px; /* Add padding top to clear fixed header */
+    min-height: 100vh;
+}
+
+.booking-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.booking-section h1 {
+    text-align: center;
+    color: #1b3322;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.booking-section h2, .booking-section p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 10px;
+}
+.booking-section h2 {
+    font-size: 1.5rem;
+}
+
+.booking-section .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-section input,
+.booking-section select,
+.booking-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.booking-section textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+.booking-section button[type="submit"] {
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    transition: background-color 0.3s ease;
+}
+
+.booking-section button[type="submit"]:hover {
+    background-color: #1e5e3a;
+}
+
+.payment-instructions {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-left: 5px solid #2E8B57;
+    border-radius: 4px;
+    color: #1b3322;
+    font-size: 0.95rem;
+    display: none; /* Hidden by default */
+}
+
+/* --- Validation Styles --- */
+.error-message {
+    color: #D8000C; /* Red for errors */
+    font-size: 0.9rem;
+    padding-top: 5px;
+    display: block; /* Make it a block to appear on its own line */
+    min-height: 1.2rem; /* Reserve space to prevent layout shifts */
+}
+
+.booking-section input.invalid,
+.booking-section select.invalid {
+    border-color: #D8000C;
+}
+/* Scroll Animation Classes */
+.reveal {
+    opacity: 0;
+    transform: translate(-50px, 100px);
+    /* Use CSS scroll-driven animations instead of JS */
+    animation: slide-in-diagonal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+}
+@keyframes slide-in-diagonal {
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

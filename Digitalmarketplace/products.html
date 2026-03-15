@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details | SokoDigital</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img
+            src="web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h1 onclick="window.location.href = 'index.html'">SokoDigital</h1>
+        </div>
+        <div class="menu-icon" id="mobile-menu-btn">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="nav-links" id="nav-links-container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="goal.html">Goal</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions" id="nav-actions-container">
+          <div class="login">
+            <button class="login-btn">
+              <a href="login.html" style="text-decoration: none; color: inherit"
+                >Login</a
+              >
+            </button>
+            <button class="signup-btn">
+              <a
+                href="signup.html"
+                style="text-decoration: none; color: inherit"
+                >Sign Up</a
+              >
+            </button>
+          </div>
+          <div class="start-selling">
+            <button class="start-selling-btn">Start Selling</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="product-details-page">
+      <div class="product-details-container">
+        <!-- Left: Image Gallery -->
+        <div class="product-image-gallery">
+          <img
+            id="p-image"
+            src=""
+            alt="Product Image"
+            style="
+              width: 100%;
+              height: 400px;
+              object-fit: cover;
+              border-radius: 12px;
+              margin-bottom: 15px;
+              background-color: #e9ecef;
+            "
+          />
+          <div class="thumbnail-gallery">
+            <div class="thumb-placeholder active"></div>
+            <div class="thumb-placeholder"></div>
+            <div class="thumb-placeholder"></div>
+            <div class="thumb-placeholder"></div>
+          </div>
+        </div>
+
+        <!-- Right: Product Info -->
+        <div class="product-details-info">
+          <span class="badge" id="p-badge">Template</span>
+          <h1 id="p-title">Modern SaaS Dashboard</h1>
+
+          <div class="seller-info-short">
+            <div class="seller-avatar">J</div>
+            <div>
+              <span>Sold by</span>
+              <strong>John Kamau</strong>
+            </div>
+          </div>
+
+          <p class="short-description" id="p-desc">
+            A comprehensive React + Node.js admin template designed for modern
+            web applications. Comes with pre-built components, charts, and pages
+            to kickstart your next project.
+          </p>
+
+          <div class="price-box">
+            <span class="price" id="p-price">Ksh. 3,500</span>
+          </div>
+
+          <div class="action-buttons">
+            <button class="pay-btn-large" id="buy-btn">Buy with M-Pesa</button>
+            <button class="add-to-cart-btn">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lower Section: Tabs for Description, Reviews etc. -->
+      <div class="product-tabs-section">
+        <div class="tabs-nav">
+          <button class="tab-link active" data-tab="description">
+            Description
+          </button>
+          <button class="tab-link" data-tab="reviews">Reviews (12)</button>
+          <button class="tab-link" data-tab="seller">About Seller</button>
+        </div>
+        <div class="tabs-content">
+          <div id="description" class="tab-pane active">
+            <h3>Full Product Description</h3>
+            <p>
+              This dashboard template is built with the latest technologies,
+              including React, Node.js, and Express. It features a fully
+              responsive design that looks great on all devices.
+            </p>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 20+ Unique Pages</li>
+              <li><i class="fas fa-check-circle"></i> Dark & Light Mode</li>
+              <li><i class="fas fa-check-circle"></i> Lifetime Free Updates</li>
+              <li><i class="fas fa-check-circle"></i> Premium Support</li>
+            </ul>
+          </div>
+          <div id="reviews" class="tab-pane">
+            <h3>Customer Reviews</h3>
+            <p>Reviews are coming soon!</p>
+          </div>
+          <div id="seller" class="tab-pane">
+            <h3>About John Kamau</h3>
+            <p>
+              John is a top-rated seller on SokoDigital, specializing in
+              business templates and software solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-bottom" style="width: 100%; margin-top: 0">
+          <p>&copy; 2026 SokoDigital. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const products = {
+          1: {
+            title: "Modern SaaS Dashboard",
+            category: "Template",
+            price: "3,500",
+            image: "../web.pictures/modern SaaS dashboard.jpeg",
+            desc: "A comprehensive React + Node.js admin template designed for modern web applications. Comes with pre-built components.",
+          },
+          2: {
+            title: "Fullstack Web Dev 2026",
+            category: "Course",
+            price: "5,000",
+            image: "../web.pictures/fullstackweb dev.jpeg",
+            desc: "Master the MERN stack from scratch. This course covers React, Node.js, Express, and MongoDB with real-world projects.",
+          },
+          3: {
+            title: "Soko POS System",
+            category: "Software",
+            price: "12,000",
+            image: "../web.pictures/soko pos system.jpeg",
+            desc: "A complete desktop inventory management system for small businesses. Track sales, stock, and generate reports easily.",
+          },
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id") || 1; // Default to 1
+        const product = products[productId];
+
+        if (product) {
+          document.getElementById("p-title").textContent = product.title;
+          document.getElementById("p-badge").textContent = product.category;
+          document.getElementById("p-price").textContent =
+            "Ksh. " + product.price;
+          document.getElementById("p-desc").textContent = product.desc;
+          document.getElementById("p-image").src = product.image;
+
+          document.getElementById("buy-btn").addEventListener("click", () => {
+            // Save selected product to localStorage for checkout
+            localStorage.setItem("checkoutProduct", JSON.stringify(product));
+            window.location.href = "checkout.html";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Portal | SokoDigital</title>
+    <link rel="stylesheet" href="adminportal.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header logo">
+          <img
+            src="../web.pictures/Gemini_Generated_Image_eu4lc5eu4lc5eu4l.png"
+            alt="logo"
+          />
+          <h2>SokoDigital Admin</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="adminportal.html" class="active"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-box-open"></i> Products</a
+            >
+          </li>
+          <li>
+            <a href="admin_sellers.html"
+              ><i class="fas fa-users"></i> Sellers</a
+            >
+          </li>
+          <li>
+            <a href="admin_orders.html"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="admin_analytics.html"
+              ><i class="fas fa-chart-line"></i> Analytics</a
+            >
+          </li>
+          <li>
+            <a href="admin_settings.html"
+              ><i class="fas fa-cog"></i> Settings</a
+            >
+          </li>
+          <li>
+            <a href="checkout.html"
+              ><i class="fas fa-credit-card"></i> Checkout</a
+            >
+          </li>
+          <li>
+            <a href="index.html"><i class="fas fa-globe"></i> View Website</a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Dashboard</h1>
+          </div>
+          <!-- Can add search and profile here later -->
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card revenue">
+            <i class="fas fa-dollar-sign"></i>
+            <div class="stat-info">
+              <h3>Ksh. 42M+</h3>
+              <p>Total Revenue</p>
+            </div>
+          </div>
+          <div class="stat-card orders">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="stat-info">
+              <h3>12,500+</h3>
+              <p>Total Orders</p>
+            </div>
+          </div>
+          <div class="stat-card sellers">
+            <i class="fas fa-users"></i>
+            <div class="stat-info">
+              <h3>1,400+</h3>
+              <p>Active Sellers</p>
+            </div>
+          </div>
+          <div class="stat-card products">
+            <i class="fas fa-box-open"></i>
+            <div class="stat-info">
+              <h3>8,400+</h3>
+              <p>Digital Products</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Orders Table -->
+        <div class="recent-orders">
+          <h2>Recent Orders</h2>
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SKD1024</td>
+                <td>Modern SaaS Dashboard</td>
+                <td>John Kamau</td>
+                <td>Ksh. 3,500</td>
+                <td><span class="status completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>#SKD1023</td>
+                <td>Fullstack Web Dev 2026</td>
+                <td>Sarah Wanjiku</td>
+                <td>Ksh. 5,000</td>
+                <td><span class="status completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td>#SKD1022</td>
+                <td>Soko POS System</td>
+                <td>David Ochieng</td>
+                <td>Ksh. 12,000</td>
+                <td><span class="status pending">Pending</span></td>
+              </tr>
+              <tr>
+                <td>#SKD1021</td>
+                <td>Canva Templates Pack</td>
+                <td>Grace Njeri</td>
+                <td>Ksh. 1,200</td>
+                <td><span class="status cancelled">Cancelled</span></td>
+              </tr>
+              <tr>
+                <td>#SKD1020</td>
+                <td>Business Plan Ebook</td>
+                <td>Peter Musyoka</td>
+                <td>Ksh. 800</td>
+                <td><span class="status completed">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

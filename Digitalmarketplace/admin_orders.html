@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Orders | Admin Portal</title>
+    <link rel="stylesheet" href="adminportal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>SokoDigital Admin</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="adminportal.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-box-open"></i> Products</a
+            >
+          </li>
+          <li>
+            <a href="admin_sellers.html"
+              ><i class="fas fa-users"></i> Sellers</a
+            >
+          </li>
+          <li>
+            <a href="admin_orders.html" class="active"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="admin_analytics.html"
+              ><i class="fas fa-chart-line"></i> Analytics</a
+            >
+          </li>
+          <li>
+            <a href="admin_settings.html"
+              ><i class="fas fa-cog"></i> Settings</a
+            >
+          </li>
+          <li>
+            <a href="checkout.html"
+              ><i class="fas fa-credit-card"></i> Checkout</a
+            >
+          </li>
+          <li>
+            <a href="index.html"><i class="fas fa-globe"></i> View Website</a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Manage Orders</h1>
+          </div>
+        </header>
+
+        <!-- Filters and Search -->
+        <div class="filters-bar">
+          <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Search by Order ID, Product, or Customer..."
+            />
+          </div>
+          <div class="filter-wrapper">
+            <select>
+              <option value="all">All Status</option>
+              <option value="completed">Completed</option>
+              <option value="pending">Pending</option>
+              <option value="cancelled">Cancelled</option>
+            </select>
+            <input
+              type="date"
+              style="
+                padding: 8px 15px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                color: #555;
+              "
+            />
+          </div>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="content-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>Product</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SKD1024</td>
+                <td>Modern SaaS Dashboard</td>
+                <td>John Kamau</td>
+                <td>2026-03-14</td>
+                <td>Ksh. 3,500</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SKD1023</td>
+                <td>Fullstack Web Dev 2026</td>
+                <td>Sarah Wanjiku</td>
+                <td>2026-03-14</td>
+                <td>Ksh. 5,000</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SKD1022</td>
+                <td>Soko POS System</td>
+                <td>David Ochieng</td>
+                <td>2026-03-13</td>
+                <td>Ksh. 12,000</td>
+                <td><span class="status pending">Pending</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SKD1021</td>
+                <td>Canva Templates Pack</td>
+                <td>Grace Njeri</td>
+                <td>2026-03-12</td>
+                <td>Ksh. 1,200</td>
+                <td><span class="status cancelled">Cancelled</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SKD1020</td>
+                <td>Business Plan Ebook</td>
+                <td>Peter Musyoka</td>
+                <td>2026-03-11</td>
+                <td>Ksh. 800</td>
+                <td><span class="status completed">Completed</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Sellers | Admin Portal</title>
+    <link rel="stylesheet" href="adminportal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h2>SokoDigital Admin</h2>
+        </div>
+        <ul class="sidebar-nav">
+          <li>
+            <a href="adminportal.html"
+              ><i class="fas fa-tachometer-alt"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="admin_products.html"
+              ><i class="fas fa-box-open"></i> Products</a
+            >
+          </li>
+          <li>
+            <a href="admin_sellers.html" class="active"
+              ><i class="fas fa-users"></i> Sellers</a
+            >
+          </li>
+          <li>
+            <a href="admin_orders.html"
+              ><i class="fas fa-shopping-cart"></i> Orders</a
+            >
+          </li>
+          <li>
+            <a href="admin_analytics.html"
+              ><i class="fas fa-chart-line"></i> Analytics</a
+            >
+          </li>
+          <li>
+            <a href="admin_settings.html"
+              ><i class="fas fa-cog"></i> Settings</a
+            >
+          </li>
+          <li>
+            <a href="checkout.html"
+              ><i class="fas fa-credit-card"></i> Checkout</a
+            >
+          </li>
+          <li>
+            <a href="index.html"><i class="fas fa-globe"></i> View Website</a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <div style="display: flex; align-items: center; gap: 15px">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <h1>Manage Sellers</h1>
+          </div>
+          <button class="btn btn-primary">
+            <i class="fas fa-user-plus"></i> Add New Seller
+          </button>
+        </header>
+
+        <!-- Filters and Search -->
+        <div class="filters-bar">
+          <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search sellers..." />
+          </div>
+          <div class="filter-wrapper">
+            <select>
+              <option value="all">All Categories</option>
+              <option value="templates">Templates</option>
+              <option value="software">Software</option>
+              <option value="courses">Courses</option>
+            </select>
+            <select>
+              <option value="all">All Status</option>
+              <option value="active">Active</option>
+              <option value="pending">Pending</option>
+              <option value="suspended">Suspended</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Sellers Table -->
+        <div class="content-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Seller ID</th>
+                <th>Seller Name</th>
+                <th>Category</th>
+                <th>Total Sales</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#SEL201</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background: #2e8b57;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                      "
+                    >
+                      J
+                    </div>
+                    <span>John Kamau</span>
+                  </div>
+                </td>
+                <td>Business Templates</td>
+                <td>Ksh. 200,000</td>
+                <td><span class="status active">Active</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-action btn-delete">
+                    <i class="fas fa-ban"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SEL202</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background: #ec4899;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                      "
+                    >
+                      S
+                    </div>
+                    <span>Sarah Wanjiku</span>
+                  </div>
+                </td>
+                <td>Digital Marketing</td>
+                <td>Ksh. 150,000</td>
+                <td><span class="status active">Active</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-action btn-delete">
+                    <i class="fas fa-ban"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SEL203</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background: #333;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                      "
+                    >
+                      D
+                    </div>
+                    <span>David Ochieng</span>
+                  </div>
+                </td>
+                <td>Software Dev</td>
+                <td>Ksh. 0</td>
+                <td><span class="status pending">Pending</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-check"></i>
+                  </button>
+                  <button class="btn-action btn-delete">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>#SEL204</td>
+                <td>
+                  <div style="display: flex; align-items: center; gap: 10px">
+                    <div
+                      style="
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background: #f59e0b;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                      "
+                    >
+                      M
+                    </div>
+                    <span>Michael Rotich</span>
+                  </div>
+                </td>
+                <td>E-books</td>
+                <td>Ksh. 12,500</td>
+                <td><span class="status suspended">Suspended</span></td>
+                <td class="actions">
+                  <button class="btn-action btn-edit">
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button class="btn-action btn-delete">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>
