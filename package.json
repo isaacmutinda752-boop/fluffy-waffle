@@ -1,0 +1,12 @@
+{
+  "name": "traveltouragency",
+  "version": "1.0.0",
+  "description": "Travel Tour Agency website",
+  "homepage": "https://isaacmutinda752-boop.github.io/fluffy-waffle",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

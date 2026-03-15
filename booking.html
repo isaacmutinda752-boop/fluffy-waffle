@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Tour - Webrayz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <!--nav section-->
+        <nav>
+            <div class="logo">
+                <img src="" alt="">
+                <h1>Webrayz</h1>
+            </div>
+            <!-- Pure CSS hamburger menu: a hidden checkbox toggled by a label -->
+            <input type="checkbox" id="menu-toggle" style="display: none;">
+            <label for="menu-toggle" class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#destinations">Destinations</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="login">
+                    <button><a href="booking.html">Book now</a></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="booking-section">
+            <div class="container">
+                <h1>Book your Tour Now!</h1>
+                <h2>Tour:Your specifications</h2>
+                <p>Price: $50 per person</p>
+                <form novalidate>
+                    <div class="form-group">
+                        <label for="pick-up-location">Pick-up Location:</label>
+                        <input type="text" id="pick-up-location" name="pick-up-location" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="drop-off-location">Drop-off Location:</label>
+                        <input type="text" id="drop-off-location" name="drop-off-location" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="number-of-passengers">Number of Passengers:</label>
+                        <input type="number" id="number-of-passengers" name="number-of-passengers" min="1" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-type">Vehicle Type:</label>
+                        <select id="vehicle-type" name="vehicle-type" required>
+                            <option value="">Select a vehicle type</option>
+                            <option value="car">Car</option>
+                            <option value="bus">Bus</option>
+                            <option value="van">Van</option>
+                        </select>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="requests">Special Requests:</label>
+                        <textarea id="requests" name="requests"></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="">Select a payment method</option>
+                            <option value="cash">Cash</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="bank-transfer">Bank Transfer</option>
+                        </select>
+                        <span class="error-message"></span>
+                        <div id="payment-instructions" class="payment-instructions"></div>
+                    </div>
+                    <div class="form-group" id="amount-container" style="display: none;">
+                        <label for="amount">Enter Amount to Pay:</label>
+                        <input type="number" id="amount" name="amount" min="1" placeholder="$50*number-of-passengers">
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit">Confirm Booking</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>About Webrayz</h4>
+                <p>Your trusted partner for exploring Kenya's breathtaking landscapes with safe and reliable transport.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#destinations">Destinations</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><p><i class="fas fa-map-marker-alt"></i> 123 Safari Lane, Nairobi</p></li>
+                    <li><p><i class="fas fa-phone"></i> +254 712 345 678</p></li>
+                    <li><p><i class="fas fa-envelope"></i> info@webrayz.com</p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Webrayz. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="booking.js"></script>
+</body>
+</html>

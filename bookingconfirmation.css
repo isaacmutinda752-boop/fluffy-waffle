@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4ebd0; /* Safari Beige */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    animation: pageLoad 1.2s ease-out;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    justify-content: center;
+}
+
+.container h2 {
+    color: #2E8B57; /* SeaGreen */
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.container p {
+    color: #22217a;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+
+.container span {
+    display: block;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    min-height: 1.2rem; /* Keeps layout stable if empty */
+}
+.container a button{
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    text-decoration: none;
+    margin-left: 50%;
+
+}
+
+.container button {
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.container button:hover {
+    background-color: #1e5e3a;
+}
+
+/* Page Load Animation */
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: brightness(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: brightness(1);
+    }
+}

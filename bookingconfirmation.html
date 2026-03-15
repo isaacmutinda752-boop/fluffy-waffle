@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bookingconfirmation.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfMake/0.1.68/pdfmake.min.js"></script>
+  </head>
+  <body>
+    <div class="container" aria-readonly="true">
+      <h2>Your Booking is confirmed</h2>
+      <p  class="customer">Booking Reference NO.:</p>
+      <span id="booking-ref"></span>
+      <p  class="customer">Date and Time of Booking:</p>
+      <span id="booking-time"></span>
+      <p class="customer">Customer Details:</p>
+      <span id="customer-details"></span>
+      <p  class="customer">Payment Summary:</p>
+      <span id="payment-summary"></span>
+      <br>
+      <br>
+      <button onclick="generatePDF()">Download Receipt</button>
+    </div>
+    <script src="bookingconfirmation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfMake/0.1.68/vfs_fonts.js"></script>
+  </body>
+</html>

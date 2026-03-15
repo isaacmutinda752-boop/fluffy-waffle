@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!--header section-->
+    <header>
+        <!--nav section-->
+        <nav>
+            <div class="logo">
+                <img src="" alt="">
+                <h1>Webrayz</h1>
+            </div>
+            <!-- Pure CSS hamburger menu: a hidden checkbox toggled by a label -->
+            <input type="checkbox" id="menu-toggle" style="display: none;">
+            <label for="menu-toggle" class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="login">
+                    <button><a href="booking.html">Book now</a></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--main section-->
+    <main>
+        <!--banner section-->
+        <section class="banner">
+            <div class="banner-content">
+                <h1>Discover Kenya's Wonders with seamless Transport-Nature Awaits</h1>
+                <p>Safe, comfortable rides to national parks, beaches and adventure sports. Tailored for solo travellers, families and groups</p>
+                <button><a href="#services">Explore our services</a></button>
+            </div>
+        </section>
+        <!--about-us-->
+        <section class="about reveal" id="about">
+            <div class="about-container">
+                <div class="about-image">
+                    <!-- You can update this source with a specific image later -->
+                    <img src="../web.pictures/aboutpagegamepark.jpeg" alt="About Webrayz Transport">
+                </div>
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>Welcome to Webrayz, your trusted partner for exploring Kenya's breathtaking landscapes. We specialize in providing safe, comfortable, and reliable transport solutions for solo travelers, families, and groups.</p>
+                    <p>Whether you're heading to the pristine beaches of the coast or the rugged terrains of our national parks, our fleet is equipped to handle the journey while ensuring your comfort.</p>
+                    <button onclick="window.location.href='aboutus.html'">Read More</button>
+                </div>
+            </div>
+        </section>
+        <!--services section-->
+        <section class="services reveal" id="services">
+            <div class="services-header">
+                <h2>Our Services</h2>
+                <p>Our transport services are designed for every type of explorer. Whether it's a thrilling safari, a city tour, or a relaxing beach transfer, we have you covered.</p>
+            </div>
+            <div class="services-container">
+                <div class="card">
+                    <img src="../web.pictures/safaritours.jpeg" alt="Safari Transport">
+                    <h3>Safari Transports</h3>
+                    <p>Off-road vehicles for game drives in parks like Tsavo, Serengeti crossings, or birdwatching at Rift Valley lakes. Includes pick-up from hotels/airports.</p>
+                </div>
+                <div class="card">
+                    <img src="../web.pictures/customtours.jpeg" alt="Beach Transfers">
+                    <h3>Custom Tours</h3>
+                    <p>Create your own itinerary and explore destinations at our own pace wuth our flexible transport options</p>
+                </div>
+                <div class="card">
+                    <img src="../web.pictures/airporttransfers.jpeg" alt="Airport Transfers">
+                    <h3>Airport & City Transfers</h3>
+                    <p>Reliable pick-up and drop-off services from major airports to your hotel or residence, ensuring a smooth start and end to your journey.</p>
+                </div>
+                <div class="card">
+                    <img src="../web.pictures/grouptravel.jpeg" alt="Airport Transfers">
+                    <h3>Group Travel</h3>
+                    <p>Comfortable transport solutions for tour groups,families , schools and corporate trips.</p>
+                </div>
+                <div class="card">
+                    <img src="../web.pictures/adventuretrips.jpeg" alt="Airport Transfers">
+                    <h3>Advenure Trips</h3>
+                    <p>Perfect transport for explores visiting remote destinations,natures and parks and adventure sports</p>
+                </div>
+                <div class="card">
+                    <img src="../web.pictures/guidedtouristtransport.jpeg" alt="Airport Transfers">
+                    <h3>Guided tourist Transport</h3>
+                    <p>Travel to popular attractions, antional parks, beaches and cultural sites with our experienced drivers.</p>
+                </div>
+            </div>
+        </section>
+        <!--destinations gallery-->
+        <section class="destinations reveal" id="destinations">
+            <div class="destinations-header">
+                <h2>Popular Destinations</h2>
+                <p>Explore the most sought-after locations in Kenya, from the vast plains of the Maasai Mara to the white sandy beaches of Diani.</p>
+            </div>
+            <div class="gallery-container" >
+                <div class="gallery-item" id="image1">
+                    <img src="../web.pictures/nationalpark1.jpeg" alt="Maasai Mara">
+                    <div class="destination-name">
+                        <h3>National parks and wildlife reserves</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" id="image2">
+                    <img src="../web.pictures/mountainhiki1.jpeg" alt="Amboseli National Park">
+                    <div class="destination-name">
+                        <h3>Scenic mountains and hiking trails</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" id="image3">
+                    <img src="../web.pictures/historicalsites1.jpeg" alt="Diani Beach">
+                    <div class="destination-name">
+                        <h3>Historical and cultural sites</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" id="image4">
+                    <img src="../web.pictures/beachescostal1.jpeg" alt="Tsavo National Park">
+                    <div class="destination-name">
+                        <h3>Beaches and coastal areas</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" id="image5">
+                    <img src="../web.pictures/citytours1.jpeg" alt="Tsavo National Park">
+                    <div class="destination-name">
+                        <h3>City Tours and Local attractions</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" id="image6">
+                    <img src="../web.pictures/natureadventure1.jpeg" alt="Tsavo National Park">
+                    <div class="destination-name">
+                        <h3>Nature and Adventure</h3>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!--blog section-->
+        <section class="blog reveal" id="blog">
+            <div class="blog-header">
+                <h2>From Our Blog</h2>
+                <p>Get the latest travel tips, destination guides, and stories from our adventures across Kenya.</p>
+            </div>
+            <div class="blog-container">
+                <div class="blog-post">
+                    <img src="../web.pictures/gamereserve3.jpeg" alt="Blog Post Image">
+                    <div class="post-content">
+                        <h3>Top 5 National Parks for First-Time Visitors</h3>
+                        <p class="post-meta">By Kelvin Musyoka | March 10, 2026</p>
+                        <p>Planning your first safari? Here are the must-visit national parks that offer incredible wildlife viewing and breathtaking scenery...</p>
+                        <br>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="../web.pictures/guidetokenyanscoast.jpeg" alt="Blog Post Image">
+                    <div class="post-content">
+                        <h3>A Guide to Kenya's Coastal Towns</h3>
+                        <p class="post-meta">By John Mumbe | March 5, 2026</p>
+                        <p>Beyond the beaches, Kenya's coast is rich with history and culture. Discover the charm of towns like Lamu and Malindi...</p>
+                        <br>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="../web.pictures/guideessential.jpeg" alt="Blog Post Image">
+                    <div class="post-content">
+                        <h3>Packing Essentials for a Kenyan Safari</h3>
+                        <p class="post-meta">By Albert Mumo | February 28, 2026</p>
+                        <p>Not sure what to pack? Our essential guide covers everything you need for a comfortable and safe safari adventure...</p>
+                        <br>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer reveal" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>About Webrayz</h4>
+                <p>Your trusted partner for exploring Kenya's breathtaking landscapes with safe and reliable transport.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><p><i class="fas fa-map-marker-alt"></i> 123 Safari Lane, Nairobi</p></li>
+                    <li><p><i class="fas fa-phone"></i> +254 712 345 678</p></li>
+                    <li><p><i class="fas fa-envelope"></i> info@webrayz.com</p></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Webrayz. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
