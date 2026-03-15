@@ -683,7 +683,28 @@ main .banner {
     max-width: 100%;
   }
 
+  /* Ensure destination images show fully on mobile */
   .gallery-item {
-    height: 250px; /* Shorter items on mobile for easier scrolling */
+    height: auto;
+  }
+
+  .gallery-item img {
+    height: auto;
+  }
+
+  /* Show the last three destination images first on mobile (reordering) */
+  .gallery-item#image4 {
+    order: -3;
+  }
+  .gallery-item#image5 {
+    order: -2;
+  }
+  .gallery-item#image6 {
+    order: -1;
+  }
+
+  /* Make blog posts stack fully and show images clearly */
+  .blog-post {
+    max-width: 100%;
   }
 }
