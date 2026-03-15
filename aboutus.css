@@ -16,7 +16,7 @@
         .about-hero {
             height: 60vh;
             /* Reuse image from style.css animation */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../web.pictures/companiesoffice.jpeg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('web.pictures/companiesoffice.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
